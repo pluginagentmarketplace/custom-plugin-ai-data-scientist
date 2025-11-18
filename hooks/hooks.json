@@ -1,0 +1,47 @@
+{
+  "hooks": [
+    {
+      "name": "progress-tracker",
+      "description": "Track learning progress and completed topics",
+      "event": "post_command",
+      "commands": ["learn", "assess", "projects"],
+      "action": {
+        "type": "log",
+        "message": "Progress tracked: ${command} completed at ${timestamp}"
+      }
+    },
+    {
+      "name": "skill-reminder",
+      "description": "Remind to practice coding daily",
+      "event": "session_start",
+      "action": {
+        "type": "message",
+        "message": "💡 Daily Reminder: Practice coding for at least 30 minutes today!"
+      }
+    },
+    {
+      "name": "project-validator",
+      "description": "Validate project structure and completeness",
+      "event": "pre_project_submission",
+      "action": {
+        "type": "validate",
+        "checks": [
+          "README.md exists",
+          "requirements.txt present",
+          "Code has docstrings",
+          "Tests included"
+        ]
+      }
+    },
+    {
+      "name": "assessment-logger",
+      "description": "Log assessment scores for progress tracking",
+      "event": "post_assessment",
+      "action": {
+        "type": "log",
+        "file": "~/.claude-code/ai-ds-progress.json",
+        "message": "Assessment completed: ${score}/140 at ${timestamp}"
+      }
+    }
+  ]
+}
