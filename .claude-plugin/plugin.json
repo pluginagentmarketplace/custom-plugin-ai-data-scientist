@@ -1,0 +1,178 @@
+{
+  "name": "ai-data-scientist",
+  "version": "1.0.0",
+  "description": "Comprehensive AI & Data Scientist learning system with 7 specialized agents, 10+ skills, and complete roadmap coverage. Master programming, ML/AI, data engineering, visualization, MLOps, and career development.",
+  "author": "Plugin Agent Marketplace",
+  "license": "MIT",
+  "homepage": "https://github.com/kamranahmedse/developer-roadmap",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/pluginagentmarketplace/custom-plugin-ai-data-scientist"
+  },
+  "keywords": [
+    "ai",
+    "data-science",
+    "machine-learning",
+    "deep-learning",
+    "python",
+    "statistics",
+    "data-engineering",
+    "mlops",
+    "visualization",
+    "nlp",
+    "computer-vision",
+    "career-development",
+    "learning-path",
+    "roadmap"
+  ],
+  "agents": [
+    {
+      "id": "programming-foundations",
+      "name": "Programming Foundations Expert",
+      "description": "Master Python, R, SQL, Git, data structures, and algorithms for data science",
+      "file": "agents/01-programming-foundations.md"
+    },
+    {
+      "id": "mathematics-statistics",
+      "name": "Mathematics & Statistics Specialist",
+      "description": "Linear algebra, calculus, probability, statistical inference, and hypothesis testing",
+      "file": "agents/02-mathematics-statistics.md"
+    },
+    {
+      "id": "data-engineering",
+      "name": "Data Engineering & Processing Expert",
+      "description": "ETL/ELT pipelines, big data (Spark, Hadoop), data lakes, streaming, and data quality",
+      "file": "agents/03-data-engineering.md"
+    },
+    {
+      "id": "machine-learning-ai",
+      "name": "Machine Learning & AI Specialist",
+      "description": "Supervised/unsupervised learning, deep learning, NLP, computer vision, and model optimization",
+      "file": "agents/04-machine-learning-ai.md"
+    },
+    {
+      "id": "visualization-communication",
+      "name": "Data Visualization & Communication Expert",
+      "description": "EDA, dashboards, storytelling, BI tools (Tableau, Power BI), and stakeholder communication",
+      "file": "agents/05-visualization-communication.md"
+    },
+    {
+      "id": "mlops-deployment",
+      "name": "MLOps & Deployment Specialist",
+      "description": "Model deployment, Docker/Kubernetes, CI/CD, monitoring, cloud platforms, and production ML",
+      "file": "agents/06-mlops-deployment.md"
+    },
+    {
+      "id": "domain-career",
+      "name": "Domain Knowledge & Career Advisor",
+      "description": "Business acumen, ethics, compliance, project management, career paths, and portfolio building",
+      "file": "agents/07-domain-career.md"
+    }
+  ],
+  "skills": [
+    {
+      "id": "python-programming",
+      "name": "Python Programming",
+      "description": "Python fundamentals, data structures, OOP, and data science libraries (Pandas, NumPy)",
+      "file": "skills/python-programming/SKILL.md"
+    },
+    {
+      "id": "statistical-analysis",
+      "name": "Statistical Analysis",
+      "description": "Probability, distributions, hypothesis testing, and statistical inference",
+      "file": "skills/statistical-analysis/SKILL.md"
+    },
+    {
+      "id": "data-engineering",
+      "name": "Data Engineering",
+      "description": "ETL pipelines, Apache Spark, data warehousing, and big data processing",
+      "file": "skills/data-engineering/SKILL.md"
+    },
+    {
+      "id": "machine-learning",
+      "name": "Machine Learning",
+      "description": "Supervised/unsupervised learning, model selection, evaluation, and scikit-learn",
+      "file": "skills/machine-learning/SKILL.md"
+    },
+    {
+      "id": "deep-learning",
+      "name": "Deep Learning",
+      "description": "Neural networks, CNNs, RNNs, Transformers with TensorFlow and PyTorch",
+      "file": "skills/deep-learning/SKILL.md"
+    },
+    {
+      "id": "nlp-processing",
+      "name": "Natural Language Processing",
+      "description": "Text processing, sentiment analysis, LLMs, and NLP frameworks",
+      "file": "skills/nlp-processing/SKILL.md"
+    },
+    {
+      "id": "computer-vision",
+      "name": "Computer Vision",
+      "description": "Image processing, object detection, segmentation, and vision models",
+      "file": "skills/computer-vision/SKILL.md"
+    },
+    {
+      "id": "data-visualization",
+      "name": "Data Visualization",
+      "description": "EDA, dashboards, Matplotlib, Seaborn, Plotly, and BI tools",
+      "file": "skills/data-visualization/SKILL.md"
+    },
+    {
+      "id": "mlops-deployment",
+      "name": "MLOps & Deployment",
+      "description": "Docker, Kubernetes, CI/CD, model monitoring, and cloud platforms",
+      "file": "skills/mlops-deployment/SKILL.md"
+    },
+    {
+      "id": "model-optimization",
+      "name": "Model Optimization",
+      "description": "Quantization, pruning, AutoML, hyperparameter tuning, and performance optimization",
+      "file": "skills/model-optimization/SKILL.md"
+    }
+  ],
+  "commands": [
+    {
+      "id": "learn",
+      "name": "learn",
+      "description": "Start your AI & Data Scientist learning journey with personalized path selection",
+      "file": "commands/learn.md"
+    },
+    {
+      "id": "browse-agent",
+      "name": "browse-agent",
+      "description": "Explore all 7 specialized agents and their capabilities",
+      "file": "commands/browse-agent.md"
+    },
+    {
+      "id": "assess",
+      "name": "assess",
+      "description": "Evaluate your knowledge with AI-powered assessments across all domains",
+      "file": "commands/assess.md"
+    },
+    {
+      "id": "roadmap",
+      "name": "roadmap",
+      "description": "View the complete AI Data Scientist roadmap and learning progression",
+      "file": "commands/roadmap.md"
+    },
+    {
+      "id": "projects",
+      "name": "projects",
+      "description": "Browse 50+ hands-on projects from beginner to advanced level",
+      "file": "commands/projects.md"
+    }
+  ],
+  "hooks": {
+    "file": "hooks/hooks.json"
+  },
+  "metadata": {
+    "learningHours": "1200+",
+    "projects": "50+",
+    "skills": 10,
+    "agents": 7,
+    "commands": 5,
+    "difficulty": "Beginner to Advanced",
+    "lastUpdated": "2025-11-18"
+  }
+}
