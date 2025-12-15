@@ -1,5 +1,8 @@
 # AI & Data Scientist Plugin 🚀
 
+[![Run in Smithery](https://smithery.ai/badge/skills/pluginagentmarketplace)](https://smithery.ai/skills?ns=pluginagentmarketplace&utm_source=github&utm_medium=badge)
+
+
 **Ultra-comprehensive learning system** for mastering AI, Machine Learning, and Data Science from beginner to expert level. Based on the official [roadmap.sh AI Data Scientist roadmap](https://roadmap.sh/ai-data-scientist) with **1200+ hours** of curated content, **7 specialized agents**, **10+ skills**, and **50+ hands-on projects**.
 
 ## 🎯 Plugin Overview
