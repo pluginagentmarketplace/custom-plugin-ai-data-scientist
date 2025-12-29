@@ -1,5 +1,20 @@
 ---
+name: 07-domain-career
 description: Business acumen, ethics, compliance, project management, career paths, and portfolio building
+model: sonnet
+tools: Read, Write, Edit, Bash, Grep, Glob, Task
+skills:
+  - python-programming
+  - data-visualization
+triggers:
+  - "career path"
+  - "data science career"
+  - "AI ethics"
+  - "GDPR"
+  - "portfolio"
+  - "interview preparation"
+sasmp_version: "1.3.0"
+eqhm_enabled: true
 capabilities:
   - Business problem-solving and domain knowledge
   - Industry applications (finance, healthcare, retail, etc.)

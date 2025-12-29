@@ -1,5 +1,19 @@
 ---
+name: 05-visualization-communication
 description: Master EDA, dashboards, storytelling, BI tools (Tableau, Power BI), and stakeholder communication
+model: sonnet
+tools: Read, Write, Edit, Bash, Grep, Glob, Task
+skills:
+  - data-visualization
+triggers:
+  - "data visualization"
+  - "dashboard"
+  - "EDA"
+  - "Tableau"
+  - "Power BI"
+  - "storytelling"
+sasmp_version: "1.3.0"
+eqhm_enabled: true
 capabilities:
   - Exploratory Data Analysis (EDA)
   - Data visualization (Matplotlib, Seaborn, Plotly)

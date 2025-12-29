@@ -1,0 +1,159 @@
+# Data Engineering Pipeline Configuration
+# ETL/ELT pipeline definitions for data processing
+
+# Pipeline Metadata
+pipeline:
+  name: "data_processing_pipeline"
+  version: "1.0.0"
+  schedule: "0 2 * * *"  # Daily at 2 AM
+  owner: "data-engineering-team"
+  description: "Main data processing pipeline for analytics"
+
+# Source Configuration
+sources:
+  - name: "postgres_source"
+    type: "postgresql"
+    connection:
+      host: "${DB_HOST}"
+      port: 5432
+      database: "production_db"
+      username: "${DB_USER}"
+      password: "${DB_PASSWORD}"
+    tables:
+      - "users"
+      - "orders"
+      - "products"
+
+  - name: "s3_raw_data"
+    type: "s3"
+    bucket: "raw-data-bucket"
+    prefix: "daily-exports/"
+    format: "parquet"
+    partition_by: ["date"]
+
+  - name: "api_source"
+    type: "rest_api"
+    endpoint: "https://api.example.com/v1/data"
+    auth:
+      type: "bearer"
+      token: "${API_TOKEN}"
+    pagination:
+      type: "cursor"
+      page_size: 1000
+
+# Transformations
+transformations:
+  - name: "clean_user_data"
+    type: "sql"
+    source: "postgres_source"
+    query: |
+      SELECT
+        user_id,
+        LOWER(TRIM(email)) as email,
+        COALESCE(name, 'Unknown') as name,
+        created_at,
+        DATE_TRUNC('day', created_at) as signup_date
+      FROM users
+      WHERE email IS NOT NULL
+        AND created_at >= '{{ ds }}'
+
+  - name: "aggregate_orders"
+    type: "pyspark"
+    source: "s3_raw_data"
+    script: "scripts/aggregate_orders.py"
+    config:
+      partition_cols: ["date", "region"]
+      output_format: "delta"
+
+  - name: "join_user_orders"
+    type: "sql"
+    dependencies:
+      - "clean_user_data"
+      - "aggregate_orders"
+    query: |
+      SELECT
+        u.*,
+        o.total_orders,
+        o.total_revenue,
+        o.avg_order_value
+      FROM clean_user_data u
+      LEFT JOIN aggregate_orders o ON u.user_id = o.user_id
+
+# Data Quality Checks
+quality_checks:
+  - name: "null_check_email"
+    type: "null_check"
+    table: "clean_user_data"
+    columns: ["email", "user_id"]
+    threshold: 0.0  # 0% nulls allowed
+
+  - name: "uniqueness_check"
+    type: "unique"
+    table: "clean_user_data"
+    columns: ["user_id"]
+
+  - name: "freshness_check"
+    type: "freshness"
+    table: "aggregate_orders"
+    column: "date"
+    max_age_hours: 24
+
+  - name: "row_count_check"
+    type: "row_count"
+    table: "join_user_orders"
+    min_rows: 1000
+    max_rows: 10000000
+
+  - name: "schema_check"
+    type: "schema"
+    table: "clean_user_data"
+    expected_columns:
+      - name: "user_id"
+        type: "integer"
+        nullable: false
+      - name: "email"
+        type: "string"
+        nullable: false
+
+# Destinations
+destinations:
+  - name: "analytics_warehouse"
+    type: "bigquery"
+    project: "analytics-project"
+    dataset: "processed"
+    table: "user_order_summary"
+    write_mode: "merge"
+    partition_field: "signup_date"
+    cluster_fields: ["region"]
+
+  - name: "data_lake"
+    type: "s3"
+    bucket: "processed-data-bucket"
+    prefix: "user_analytics/"
+    format: "delta"
+    partition_by: ["signup_date"]
+
+# Alerting
+alerting:
+  on_failure:
+    - type: "slack"
+      channel: "#data-alerts"
+    - type: "email"
+      recipients: ["data-team@company.com"]
+
+  on_success:
+    - type: "slack"
+      channel: "#data-pipeline-status"
+
+# Resource Configuration
+resources:
+  spark:
+    executor_memory: "4g"
+    executor_cores: 2
+    num_executors: 10
+    driver_memory: "2g"
+
+  airflow:
+    pool: "default_pool"
+    retries: 3
+    retry_delay_minutes: 5

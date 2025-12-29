@@ -1,6 +1,9 @@
 ---
 name: deep-learning
 description: Neural networks, CNNs, RNNs, Transformers with TensorFlow and PyTorch. Use for image classification, NLP, sequence modeling, or complex pattern recognition.
+sasmp_version: "1.3.0"
+bonded_agent: 04-machine-learning-ai
+bond_type: PRIMARY_BOND
 ---
 
 # Deep Learning

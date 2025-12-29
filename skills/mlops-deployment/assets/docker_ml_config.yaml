@@ -1,0 +1,148 @@
+# MLOps Docker Configuration
+# Production ML model deployment settings
+
+# Service Configuration
+service:
+  name: "ml-model-service"
+  version: "1.0.0"
+  description: "Production ML model serving"
+
+# Docker Configuration
+docker:
+  base_image: "python:3.10-slim"
+  registry: "${DOCKER_REGISTRY}"
+  tag_format: "${SERVICE_NAME}:${VERSION}-${GIT_SHA}"
+
+  # Multi-stage build
+  stages:
+    builder:
+      install_deps: true
+      compile_models: true
+
+    runtime:
+      user: "appuser"
+      workdir: "/app"
+
+  # Resource limits
+  resources:
+    memory: "2g"
+    cpus: "2.0"
+
+  # Health check
+  healthcheck:
+    endpoint: "/health"
+    interval: "30s"
+    timeout: "3s"
+    retries: 3
+
+# Model Serving
+serving:
+  framework: "fastapi"  # fastapi, flask, triton, seldon
+  port: 8000
+  workers: 4
+  timeout: 60
+
+  # Endpoints
+  endpoints:
+    predict: "/predict"
+    batch_predict: "/batch_predict"
+    health: "/health"
+    metrics: "/metrics"
+
+  # Request validation
+  validation:
+    enabled: true
+    max_batch_size: 100
+    max_request_size_mb: 10
+
+# Model Loading
+model:
+  format: "pickle"  # pickle, onnx, joblib, pytorch, tensorflow
+  path: "/app/models/model.pkl"
+  version_path: "/app/models/version.txt"
+
+  # Hot reload
+  hot_reload:
+    enabled: true
+    check_interval: 60
+
+  # Caching
+  cache:
+    enabled: true
+    max_size_mb: 500
+
+# Monitoring
+monitoring:
+  prometheus:
+    enabled: true
+    port: 9090
+    path: "/metrics"
+
+  metrics:
+    - "prediction_latency"
+    - "prediction_count"
+    - "error_rate"
+    - "model_version"
+    - "input_distribution"
+
+  logging:
+    level: "INFO"
+    format: "json"
+    include_request_id: true
+
+# Scaling
+scaling:
+  min_replicas: 2
+  max_replicas: 10
+
+  autoscaling:
+    enabled: true
+    target_cpu_percent: 70
+    target_memory_percent: 80
+    scale_up_cooldown: 60
+    scale_down_cooldown: 300
+
+# Security
+security:
+  # API authentication
+  auth:
+    enabled: true
+    type: "api_key"  # api_key, jwt, oauth2
+
+  # Rate limiting
+  rate_limit:
+    enabled: true
+    requests_per_minute: 100
+    burst: 20
+
+  # Input sanitization
+  input_validation:
+    max_string_length: 10000
+    allowed_types: ["int", "float", "string", "list"]
+
+# CI/CD Integration
+cicd:
+  trigger_on:
+    - "model_update"
+    - "code_change"
+
+  stages:
+    - "lint"
+    - "test"
+    - "build"
+    - "push"
+    - "deploy"
+
+  rollback:
+    enabled: true
+    on_error_rate: 0.05
+    on_latency_p99: 1000
+
+# Environment Variables
+environment:
+  required:
+    - "MODEL_PATH"
+    - "LOG_LEVEL"
+  optional:
+    - "MLFLOW_TRACKING_URI"
+    - "PROMETHEUS_MULTIPROC_DIR"

@@ -1,5 +1,21 @@
 ---
+name: 06-mlops-deployment
 description: Master model deployment, Docker/Kubernetes, CI/CD, monitoring, cloud platforms, and production ML
+model: sonnet
+tools: Read, Write, Edit, Bash, Grep, Glob, Task
+skills:
+  - mlops-deployment
+  - model-optimization
+triggers:
+  - "MLOps"
+  - "model deployment"
+  - "Docker"
+  - "Kubernetes"
+  - "CI/CD"
+  - "MLflow"
+  - "production ML"
+sasmp_version: "1.3.0"
+eqhm_enabled: true
 capabilities:
   - Model deployment strategies
   - Docker containerization

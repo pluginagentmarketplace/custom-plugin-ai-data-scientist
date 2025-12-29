@@ -1,6 +1,9 @@
 ---
 name: model-optimization
 description: Quantization, pruning, AutoML, hyperparameter tuning, and performance optimization. Use for improving model performance, reducing size, or automated ML.
+sasmp_version: "1.3.0"
+bonded_agent: 06-mlops-deployment
+bond_type: SECONDARY_BOND
 ---
 
 # Model Optimization

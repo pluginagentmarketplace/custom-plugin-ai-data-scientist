@@ -1,0 +1,136 @@
+# Deep Learning Neural Network Configuration Template
+# Use this template to configure neural network architectures
+
+# Model Architecture Configuration
+model:
+  name: "custom_neural_network"
+  type: "sequential"  # sequential, functional, or subclass
+
+  # Input Configuration
+  input:
+    shape: [224, 224, 3]  # For image classification
+    dtype: "float32"
+    preprocessing:
+      normalize: true
+      augment: true
+
+  # Layer Definitions
+  layers:
+    # Convolutional Block 1
+    - type: "Conv2D"
+      filters: 32
+      kernel_size: [3, 3]
+      activation: "relu"
+      padding: "same"
+    - type: "BatchNormalization"
+    - type: "MaxPooling2D"
+      pool_size: [2, 2]
+    - type: "Dropout"
+      rate: 0.25
+
+    # Convolutional Block 2
+    - type: "Conv2D"
+      filters: 64
+      kernel_size: [3, 3]
+      activation: "relu"
+      padding: "same"
+    - type: "BatchNormalization"
+    - type: "MaxPooling2D"
+      pool_size: [2, 2]
+    - type: "Dropout"
+      rate: 0.25
+
+    # Convolutional Block 3
+    - type: "Conv2D"
+      filters: 128
+      kernel_size: [3, 3]
+      activation: "relu"
+      padding: "same"
+    - type: "BatchNormalization"
+    - type: "MaxPooling2D"
+      pool_size: [2, 2]
+    - type: "Dropout"
+      rate: 0.25
+
+    # Dense Layers
+    - type: "Flatten"
+    - type: "Dense"
+      units: 512
+      activation: "relu"
+    - type: "BatchNormalization"
+    - type: "Dropout"
+      rate: 0.5
+    - type: "Dense"
+      units: 10  # Number of classes
+      activation: "softmax"
+
+# Training Configuration
+training:
+  optimizer:
+    name: "adam"
+    learning_rate: 0.001
+    beta_1: 0.9
+    beta_2: 0.999
+    epsilon: 1e-07
+
+  loss: "categorical_crossentropy"
+  metrics:
+    - "accuracy"
+    - "precision"
+    - "recall"
+    - "f1_score"
+
+  batch_size: 32
+  epochs: 100
+
+  # Learning Rate Schedule
+  lr_schedule:
+    type: "reduce_on_plateau"
+    factor: 0.5
+    patience: 5
+    min_lr: 1e-7
+
+  # Early Stopping
+  early_stopping:
+    monitor: "val_loss"
+    patience: 10
+    restore_best_weights: true
+
+  # Checkpointing
+  checkpoint:
+    filepath: "models/best_model.h5"
+    monitor: "val_accuracy"
+    save_best_only: true
+    mode: "max"
+
+# Data Augmentation
+augmentation:
+  enabled: true
+  params:
+    rotation_range: 20
+    width_shift_range: 0.2
+    height_shift_range: 0.2
+    horizontal_flip: true
+    vertical_flip: false
+    zoom_range: 0.2
+    shear_range: 0.2
+    fill_mode: "nearest"
+
+# Hardware Configuration
+hardware:
+  device: "auto"  # auto, cpu, gpu
+  mixed_precision: true
+  multi_gpu: false
+  num_workers: 4
+
+# Logging and Monitoring
+logging:
+  tensorboard:
+    enabled: true
+    log_dir: "logs/tensorboard"
+  wandb:
+    enabled: false
+    project: "deep-learning-project"
+  mlflow:
+    enabled: true
+    tracking_uri: "mlruns"

@@ -1,6 +1,9 @@
 ---
 name: nlp-processing
 description: Text processing, sentiment analysis, LLMs, and NLP frameworks. Use for text classification, named entity recognition, or language models.
+sasmp_version: "1.3.0"
+bonded_agent: 04-machine-learning-ai
+bond_type: SECONDARY_BOND
 ---
 
 # Natural Language Processing

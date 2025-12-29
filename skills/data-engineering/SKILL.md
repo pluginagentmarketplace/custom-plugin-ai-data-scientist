@@ -1,6 +1,9 @@
 ---
 name: data-engineering
 description: ETL pipelines, Apache Spark, data warehousing, and big data processing. Use for building data pipelines, processing large datasets, or data infrastructure.
+sasmp_version: "1.3.0"
+bonded_agent: 03-data-engineering
+bond_type: PRIMARY_BOND
 ---
 
 # Data Engineering

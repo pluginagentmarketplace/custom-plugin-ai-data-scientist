@@ -1,6 +1,9 @@
 ---
 name: computer-vision
 description: Image processing, object detection, segmentation, and vision models. Use for image classification, object detection, or visual analysis tasks.
+sasmp_version: "1.3.0"
+bonded_agent: 04-machine-learning-ai
+bond_type: SECONDARY_BOND
 ---
 
 # Computer Vision

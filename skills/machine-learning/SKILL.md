@@ -1,6 +1,9 @@
 ---
 name: machine-learning
 description: Supervised/unsupervised learning, model selection, evaluation, and scikit-learn. Use for building classification, regression, or clustering models.
+sasmp_version: "1.3.0"
+bonded_agent: 04-machine-learning-ai
+bond_type: PRIMARY_BOND
 ---
 
 # Machine Learning with Scikit-Learn

@@ -1,0 +1,24 @@
+{
+  "name": "pluginagentmarketplace-ai-data-scientist",
+  "owner": {
+    "name": "Dr. Umit Kacar & Muhsin Elcicek",
+    "email": "kacarumit.phd@gmail.com",
+    "url": "https://github.com/pluginagentmarketplace"
+  },
+  "plugins": [
+    {
+      "name": "ai-data-scientist-plugin",
+      "source": "./",
+      "description": "Comprehensive AI & Data Scientist learning system with 7 specialized agents and 10 skills",
+      "version": "2.0.0",
+      "keywords": ["ai", "data-science", "machine-learning", "deep-learning", "mlops"],
+      "author": {
+        "name": "Dr. Umit Kacar & Muhsin Elcicek",
+        "email": "kacarumit.phd@gmail.com",
+        "url": "https://github.com/pluginagentmarketplace"
+      },
+      "repository": "https://github.com/pluginagentmarketplace/custom-plugin-ai-data-scientist",
+      "homepage": "https://github.com/pluginagentmarketplace/custom-plugin-ai-data-scientist"
+    }
+  ]
+}

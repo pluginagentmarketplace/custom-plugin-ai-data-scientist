@@ -1,246 +1,226 @@
-# AI & Data Scientist Plugin 🚀
+<div align="center">
 
-**Ultra-comprehensive learning system** for mastering AI, Machine Learning, and Data Science from beginner to expert level. Based on the official [roadmap.sh AI Data Scientist roadmap](https://roadmap.sh/ai-data-scientist) with **1200+ hours** of curated content, **7 specialized agents**, **10+ skills**, and **50+ hands-on projects**.
+# AI & Data Scientist Plugin
 
-## 🎯 Plugin Overview
+### Complete AI/ML Mastery for Claude Code
 
-This plugin transforms your Claude Code experience into a complete AI & Data Science learning environment with:
+**Master AI, Machine Learning, and Data Science with 7 specialized agents, 10 production-ready skills, and 1200+ hours of curated content**
 
-- **7 Specialized Agents**: Each an expert in a specific domain
-- **10 Invokable Skills**: Instant access to practical knowledge
-- **5 Slash Commands**: Interactive learning paths
-- **50+ Projects**: Hands-on portfolio building
-- **Complete Roadmap**: 12-month structured curriculum
-- **Assessment System**: Track your progress
+[![Verified](https://img.shields.io/badge/Verified-Working-success?style=flat-square&logo=checkmarx)](https://github.com/pluginagentmarketplace/custom-plugin-ai-data-scientist)
+[![License](https://img.shields.io/badge/License-MIT-yellow?style=flat-square)](LICENSE)
+[![Version](https://img.shields.io/badge/Version-2.0.0-blue?style=flat-square)](https://github.com/pluginagentmarketplace/custom-plugin-ai-data-scientist)
+[![Status](https://img.shields.io/badge/Status-Production_Ready-brightgreen?style=flat-square)](https://github.com/pluginagentmarketplace/custom-plugin-ai-data-scientist)
+[![Agents](https://img.shields.io/badge/Agents-7-orange?style=flat-square)](#agents-overview)
+[![Skills](https://img.shields.io/badge/Skills-10-purple?style=flat-square)](#skills-reference)
+[![SASMP](https://img.shields.io/badge/SASMP-v1.3.0-blueviolet?style=flat-square)](#)
 
-## 📦 Installation
+[![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)](skills/python-programming/)
+[![PyTorch](https://img.shields.io/badge/PyTorch-EE4C2C?style=for-the-badge&logo=pytorch&logoColor=white)](skills/deep-learning/)
+[![TensorFlow](https://img.shields.io/badge/TensorFlow-FF6F00?style=for-the-badge&logo=tensorflow&logoColor=white)](skills/deep-learning/)
+[![Scikit-learn](https://img.shields.io/badge/Scikit_learn-F7931E?style=for-the-badge&logo=scikit-learn&logoColor=white)](skills/machine-learning/)
 
-### One-Command Install
+[Quick Start](#quick-start) | [Agents](#agents-overview) | [Skills](#skills-reference) | [Commands](#commands)
+
+</div>
+
+---
+
+## Verified Installation
+
+> **This plugin has been tested and verified working on Claude Code.**
+> Last verified: December 2025
+
+---
+
+## Quick Start
+
+### Option 1: Install from GitHub (Recommended)
+
 ```bash
-# Load plugin in Claude Code
-# Simply reference the plugin directory
-./custom-plugin-ai-data-scientist
+# Step 1: Add the marketplace from GitHub
+/plugin add marketplace pluginagentmarketplace/custom-plugin-ai-data-scientist
+
+# Step 2: Install the plugin
+/plugin install ai-data-scientist-plugin@pluginagentmarketplace-ai-data-scientist
+
+# Step 3: Restart Claude Code to load new plugins
 ```
 
-### From GitHub
+### Option 2: Clone and Load Locally
+
 ```bash
-# Clone repository
+# Clone the repository
 git clone https://github.com/pluginagentmarketplace/custom-plugin-ai-data-scientist.git
 
-# Load in Claude Code
+# Navigate to the directory in Claude Code
 cd custom-plugin-ai-data-scientist
+
+# Load the plugin
+/plugin load .
 ```
 
-## 🤖 7 Specialized Agents
+After loading, restart Claude Code.
 
-### 1. Programming Foundations Expert
-**Focus:** Python, R, SQL, Git, Data Structures
-- Master Python for data science
-- SQL query optimization
-- Version control best practices
-- Production-ready code
+### Verify Installation
 
-### 2. Mathematics & Statistics Specialist
-**Focus:** Linear Algebra, Calculus, Probability, Statistics
-- Statistical inference and hypothesis testing
-- Mathematical foundations for ML
-- A/B testing and experimental design
-- Bayesian statistics
+After restarting Claude Code, verify the plugin is loaded. You should see these agents available:
 
-### 3. Data Engineering & Processing Expert
-**Focus:** ETL/ELT, Big Data, Spark, Kafka
-- Build scalable data pipelines
-- Apache Spark for big data
-- Data warehousing (Snowflake, BigQuery)
-- Stream processing
-
-### 4. Machine Learning & AI Specialist
-**Focus:** ML Algorithms, Deep Learning, NLP, Computer Vision
-- Supervised/unsupervised learning
-- Deep learning (CNNs, RNNs, Transformers)
-- NLP and Computer Vision
-- Model optimization
-
-### 5. Data Visualization & Communication Expert
-**Focus:** EDA, Dashboards, Storytelling, BI Tools
-- Exploratory data analysis
-- Interactive dashboards (Plotly, Dash)
-- Tableau, Power BI
-- Stakeholder communication
-
-### 6. MLOps & Deployment Specialist
-**Focus:** Docker, Kubernetes, CI/CD, Cloud Platforms
-- Model deployment strategies
-- Containerization and orchestration
-- CI/CD pipelines for ML
-- Production monitoring
-
-### 7. Domain Knowledge & Career Advisor
-**Focus:** Business Acumen, Ethics, Career Development
-- Industry applications (finance, healthcare, retail)
-- Ethics and responsible AI
-- Interview preparation
-- Portfolio building
-
-## 🎓 10 Invokable Skills
-
-Access instant knowledge on demand:
-
-1. **`python-programming`** - Python fundamentals to advanced
-2. **`statistical-analysis`** - Hypothesis testing, A/B testing
-3. **`data-engineering`** - ETL pipelines, Spark, data quality
-4. **`machine-learning`** - Scikit-learn, model selection
-5. **`deep-learning`** - PyTorch, TensorFlow, neural networks
-6. **`nlp-processing`** - Text analysis, LLMs, Transformers
-7. **`computer-vision`** - CNNs, object detection, segmentation
-8. **`data-visualization`** - Matplotlib, Seaborn, Plotly, BI tools
-9. **`mlops-deployment`** - Docker, Kubernetes, model serving
-10. **`model-optimization`** - Quantization, pruning, AutoML
-
-## 🔧 5 Slash Commands
-
-### `/learn`
-Start your personalized learning journey
-- Choose path: Beginner, Intermediate, Advanced
-- 12-month roadmap with weekly goals
-- Study schedule templates
-- Learning resources
-
-### `/browse-agent`
-Explore all 7 specialized agents
-- Detailed agent capabilities
-- When to use each agent
-- Learning progression paths
-- Specialization tracks
-
-### `/assess`
-Evaluate your knowledge across all domains
-- Self-assessment questionnaire
-- Score interpretation (0-140 points)
-- Skill gap analysis
-- Personalized learning plan
-
-### `/roadmap`
-View complete AI & Data Scientist roadmap
-- 12-month curriculum
-- Phase-by-phase breakdown
-- Resources by category
-- Success metrics
-
-### `/projects`
-Browse 50+ hands-on projects
-- Beginner to advanced levels
-- Domain-specific projects
-- Portfolio building guide
-- Step-by-step implementations
-
-## 🚀 Quick Start
-
-### For Complete Beginners
-```bash
-# 1. Start with learning path
-/learn
-
-# 2. Choose "Complete Beginner" track
-
-# 3. Begin with Programming Foundations Agent
-"I need help learning Python from scratch"
-
-# 4. Practice with beginner projects
-/projects  # Select Titanic or House Prices
+```
+custom-plugin-ai-data-scientist:01-programming-foundations
+custom-plugin-ai-data-scientist:02-mathematics-statistics
+custom-plugin-ai-data-scientist:03-data-engineering
+custom-plugin-ai-data-scientist:04-machine-learning-ai
+custom-plugin-ai-data-scientist:05-visualization-communication
+custom-plugin-ai-data-scientist:06-mlops-deployment
+custom-plugin-ai-data-scientist:07-domain-career
 ```
 
-### For Intermediate Learners
-```bash
-# 1. Assess your current skills
-/assess
+---
 
-# 2. View roadmap
-/roadmap
+## Available Skills
 
-# 3. Focus on weak areas
-"Help me with deep learning using PyTorch"
+Once installed, these 10 skills become available:
 
-# 4. Build advanced projects
-/projects  # Image classification, NLP
+| Skill | Invoke Command | Description |
+|-------|----------------|-------------|
+| Python Programming | `Skill("ai-data-scientist-plugin:python-programming")` | Python fundamentals, OOP, data libraries |
+| Statistical Analysis | `Skill("ai-data-scientist-plugin:statistical-analysis")` | Probability, hypothesis testing |
+| Data Engineering | `Skill("ai-data-scientist-plugin:data-engineering")` | ETL pipelines, Spark, data quality |
+| Machine Learning | `Skill("ai-data-scientist-plugin:machine-learning")` | Scikit-learn, model selection |
+| Deep Learning | `Skill("ai-data-scientist-plugin:deep-learning")` | PyTorch, TensorFlow, neural nets |
+| NLP Processing | `Skill("ai-data-scientist-plugin:nlp-processing")` | Text analysis, LLMs, Transformers |
+| Computer Vision | `Skill("ai-data-scientist-plugin:computer-vision")` | CNNs, object detection |
+| Data Visualization | `Skill("ai-data-scientist-plugin:data-visualization")` | Matplotlib, Plotly, BI tools |
+| MLOps Deployment | `Skill("ai-data-scientist-plugin:mlops-deployment")` | Docker, Kubernetes, CI/CD |
+| Model Optimization | `Skill("ai-data-scientist-plugin:model-optimization")` | Quantization, AutoML, tuning |
+
+---
+
+## What This Plugin Does
+
+This plugin provides **7 specialized agents** and **10 production-ready skills** covering 1200+ hours of AI/ML content:
+
+| Agent | Purpose |
+|-------|---------|
+| **Programming Foundations** | Python, R, SQL, Git, data structures |
+| **Mathematics & Statistics** | Linear algebra, calculus, probability |
+| **Data Engineering** | ETL/ELT, Spark, Kafka, data warehousing |
+| **Machine Learning & AI** | ML algorithms, deep learning, NLP, CV |
+| **Visualization & Communication** | EDA, dashboards, storytelling, BI tools |
+| **MLOps & Deployment** | Docker, Kubernetes, CI/CD, cloud |
+| **Domain & Career** | Business acumen, ethics, career development |
+
+---
+
+## Agents Overview
+
+### 7 Implementation Agents
+
+Each agent is designed to **do the work**, not just explain:
+
+| Agent | Capabilities | Example Prompts |
+|-------|--------------|-----------------|
+| **Programming Foundations** | Python, SQL, Git | `"Python basics"`, `"SQL optimization"` |
+| **Mathematics & Statistics** | Math, probability, stats | `"Linear algebra"`, `"Hypothesis testing"` |
+| **Data Engineering** | ETL, Spark, Kafka | `"Build data pipeline"`, `"Spark job"` |
+| **Machine Learning & AI** | ML, DL, NLP, CV | `"Train model"`, `"NLP pipeline"` |
+| **Visualization** | EDA, dashboards, BI | `"Create dashboard"`, `"Data story"` |
+| **MLOps & Deployment** | Docker, K8s, cloud | `"Deploy model"`, `"CI/CD pipeline"` |
+| **Domain & Career** | Business, ethics, career | `"Portfolio advice"`, `"Interview prep"` |
+
+---
+
+## Commands
+
+5 interactive commands for AI/ML workflows:
+
+| Command | Usage | Description |
+|---------|-------|-------------|
+| `/learn` | `/learn` | Start personalized learning journey |
+| `/browse-agent` | `/browse-agent` | Explore all 7 agents |
+| `/assess` | `/assess` | Evaluate your knowledge |
+| `/roadmap` | `/roadmap` | View complete AI roadmap |
+| `/projects` | `/projects` | Browse 50+ hands-on projects |
+
+---
+
+## Skills Reference
+
+Each skill includes **Golden Format** content:
+- `assets/` - Configuration templates and setup files
+- `scripts/` - Automation and validation scripts
+- `references/` - Methodology guides and best practices
+
+### All 10 Skills by Category
+
+| Category | Skills |
+|----------|--------|
+| **Programming** | python-programming |
+| **Math/Stats** | statistical-analysis |
+| **Data** | data-engineering, data-visualization |
+| **ML/AI** | machine-learning, deep-learning |
+| **Specialization** | nlp-processing, computer-vision |
+| **Production** | mlops-deployment, model-optimization |
+
+---
+
+## Usage Examples
+
+### Example 1: Train ML Model
+
+```python
+# Before: Manual model training
+
+# After (with ML Agent):
+Skill("ai-data-scientist-plugin:machine-learning")
+
+# Generates:
+# - Data preprocessing pipeline
+# - Model selection (scikit-learn)
+# - Cross-validation setup
+# - Hyperparameter tuning
 ```
 
-### For Career Transitioners
-```bash
-# 1. Assess skills
-/assess
+### Example 2: Build NLP Pipeline
 
-# 2. Work with Domain & Career Agent
-"Help me build a data science portfolio"
+```python
+# Before: Manual text processing
 
-# 3. Interview preparation
-"Prepare me for ML engineering interviews"
+# After (with NLP skill):
+Skill("ai-data-scientist-plugin:nlp-processing")
 
-# 4. Projects for resume
-/projects  # End-to-end MLOps, production systems
-```
-
-## 📚 Example Workflows
-
-### Workflow 1: Build Your First ML Model
-```
-1. /learn → Choose "Complete Beginner"
-2. Use Programming Foundations Agent for Python basics
-3. Use Machine Learning Agent for first model
-4. /projects → Titanic Survival Prediction
-5. Deploy with MLOps Agent
+# Provides:
+# - Text preprocessing
+# - Transformer models (Hugging Face)
+# - Sentiment analysis
+# - Fine-tuning guide
 ```
 
-### Workflow 2: Specialize in NLP
-```
-1. /assess → Evaluate current skills
-2. Use Deep Learning Agent → NLP focus
-3. Invoke `nlp-processing` skill for quick reference
-4. /projects → Sentiment Analysis, Text Classification
-5. Advanced: Chatbot with Transformers
+### Example 3: Deploy Model to Production
+
+```python
+# Before: No deployment strategy
+
+# After (with MLOps Agent):
+Skill("ai-data-scientist-plugin:mlops-deployment")
+
+# Creates:
+# - Docker containerization
+# - Kubernetes deployment
+# - CI/CD pipeline
+# - Monitoring setup
 ```
 
-### Workflow 3: Become MLOps Engineer
-```
-1. /roadmap → View MLOps path
-2. Use MLOps & Deployment Agent
-3. Invoke `mlops-deployment` skill
-4. /projects → End-to-End MLOps Pipeline
-5. Deploy to cloud (AWS/GCP/Azure)
-```
+---
 
-## 🎯 Learning Paths
-
-### Path 1: Data Scientist (12 months)
-```
-Months 1-3: Foundations (Python, SQL, Statistics)
-Months 4-6: Machine Learning (Scikit-learn, projects)
-Months 7-9: Deep Learning (PyTorch, specialization)
-Months 10-12: Production & Career (MLOps, portfolio)
-```
-
-### Path 2: ML Engineer (12 months)
-```
-Months 1-3: Programming + Data Engineering
-Months 4-6: ML + Model Optimization
-Months 7-9: Deep Learning + Advanced ML
-Months 10-12: MLOps + Production Systems
-```
-
-### Path 3: NLP Specialist (After core skills)
-```
-Foundations → ML Basics → Deep Learning →
-NLP Fundamentals → Transformers & LLMs →
-Fine-tuning → Production NLP Systems
-```
-
-## 📊 Plugin Structure
+## Plugin Structure
 
 ```
 custom-plugin-ai-data-scientist/
 ├── .claude-plugin/
-│   └── plugin.json              # Plugin manifest
-├── agents/                      # 7 specialized agents
+│   ├── plugin.json           # Plugin manifest
+│   └── marketplace.json      # Marketplace config
+├── agents/                   # 7 specialized agents
 │   ├── 01-programming-foundations.md
 │   ├── 02-mathematics-statistics.md
 │   ├── 03-data-engineering.md
@@ -248,136 +228,130 @@ custom-plugin-ai-data-scientist/
 │   ├── 05-visualization-communication.md
 │   ├── 06-mlops-deployment.md
 │   └── 07-domain-career.md
-├── skills/                      # 10 invokable skills
-│   ├── python-programming/SKILL.md
-│   ├── statistical-analysis/SKILL.md
-│   ├── data-engineering/SKILL.md
-│   ├── machine-learning/SKILL.md
-│   ├── deep-learning/SKILL.md
-│   ├── nlp-processing/SKILL.md
+├── skills/                   # 10 skills (Golden Format)
 │   ├── computer-vision/SKILL.md
+│   ├── data-engineering/SKILL.md
 │   ├── data-visualization/SKILL.md
+│   ├── deep-learning/SKILL.md
+│   ├── machine-learning/SKILL.md
 │   ├── mlops-deployment/SKILL.md
-│   └── model-optimization/SKILL.md
-├── commands/                    # 5 slash commands
-│   ├── learn.md
-│   ├── browse-agent.md
+│   ├── model-optimization/SKILL.md
+│   ├── nlp-processing/SKILL.md
+│   ├── python-programming/SKILL.md
+│   └── statistical-analysis/SKILL.md
+├── commands/                 # 5 slash commands
 │   ├── assess.md
-│   ├── roadmap.md
-│   └── projects.md
-├── hooks/
-│   └── hooks.json               # Automation hooks
-└── README.md
-```
-
-## 🔥 Features
-
-✅ **Comprehensive Coverage**: 1200+ hours of content
-✅ **Practical Focus**: 50+ hands-on projects
-✅ **Structured Learning**: 12-month roadmap
-✅ **Self-Paced**: Learn at your own speed
-✅ **Assessment System**: Track progress
-✅ **Production-Ready**: Deploy real ML systems
-✅ **Career Guidance**: Interview prep, portfolio
-✅ **Modern Stack**: Latest tools and frameworks
-✅ **Best Practices**: Industry standards
-✅ **Community-Driven**: Based on roadmap.sh
-
-## 🛠️ Tech Stack Covered
-
-**Programming:**
-- Python, R, SQL
-- Git/GitHub
-- Data structures & algorithms
-
-**Data Science:**
-- Pandas, NumPy, SciPy
-- Matplotlib, Seaborn, Plotly
-- Jupyter Notebooks
-
-**Machine Learning:**
-- Scikit-learn
-- XGBoost, LightGBM
-- Auto-sklearn, H2O
-
-**Deep Learning:**
-- PyTorch, TensorFlow
-- Hugging Face Transformers
-- YOLO, U-Net
-
-**Big Data:**
-- Apache Spark (PySpark)
-- Apache Kafka
-- Hadoop ecosystem
-
-**MLOps:**
-- Docker, Kubernetes
-- FastAPI, Flask
-- MLflow, DVC
-- Prometheus, Grafana
-
-**Cloud Platforms:**
-- AWS (SageMaker, EC2, S3)
-- Google Cloud (Vertex AI, BigQuery)
-- Azure (Azure ML, Synapse)
-
-**BI Tools:**
-- Tableau
-- Power BI
-- Looker
-
-## 📈 Success Metrics
-
-After completing this plugin's curriculum:
-
-**Technical Skills:**
-- ✅ Build end-to-end ML pipelines
-- ✅ Deploy production ML systems
-- ✅ Process big data with Spark
-- ✅ Deep learning with PyTorch/TensorFlow
-- ✅ NLP and Computer Vision projects
-
-**Portfolio:**
-- ✅ 5+ polished GitHub projects
-- ✅ Deployed ML applications
-- ✅ Kaggle competition participation
-- ✅ Technical blog posts
-
-**Career:**
-- ✅ Data Scientist/ML Engineer ready
-- ✅ Interview-ready (coding, ML, case studies)
-- ✅ Professional network
-- ✅ Industry knowledge
-
-## 🤝 Contributing
-
-This plugin is based on the community-driven [roadmap.sh AI Data Scientist roadmap](https://roadmap.sh/ai-data-scientist). Contributions are welcome!
-
-## 📝 License
-
-MIT License
-
-## 🌟 Acknowledgments
-
-- Based on [roadmap.sh AI Data Scientist Roadmap](https://roadmap.sh/ai-data-scientist)
-- Inspired by the data science and ML community
-- Built for Claude Code users
-
-## 🎓 Start Learning Today!
-
-```bash
-# Start your journey
-/learn
-
-# Or assess your skills
-/assess
-
-# Or dive into a project
-/projects
+│   ├── browse-agent.md
+│   ├── learn.md
+│   ├── projects.md
+│   └── roadmap.md
+├── hooks/hooks.json
+├── README.md
+├── CHANGELOG.md
+└── LICENSE
 ```
 
 ---
 
-**Remember:** Becoming an AI & Data Scientist is a journey, not a destination. This plugin is your guide, but your dedication and practice are what will make you successful. Start small, build consistently, and never stop learning!
+## Technology Coverage
 
-**Ready to transform your career? Let's begin! 🚀**
+| Category | Technologies |
+|----------|--------------|
+| **Programming** | Python, R, SQL, Git |
+| **Data Science** | Pandas, NumPy, SciPy, Jupyter |
+| **Machine Learning** | Scikit-learn, XGBoost, LightGBM |
+| **Deep Learning** | PyTorch, TensorFlow, Hugging Face |
+| **Big Data** | Apache Spark, Kafka, Hadoop |
+| **MLOps** | Docker, Kubernetes, MLflow, DVC |
+| **Cloud** | AWS SageMaker, GCP Vertex AI, Azure ML |
+| **BI Tools** | Tableau, Power BI, Looker |
+
+---
+
+## Learning Paths
+
+| Path | Duration | Focus |
+|------|----------|-------|
+| **Data Scientist** | 12 months | Full curriculum |
+| **ML Engineer** | 12 months | Engineering focus |
+| **NLP Specialist** | 6 months | After core skills |
+| **CV Specialist** | 6 months | After core skills |
+
+### 12-Month Curriculum
+- Months 1-3: Foundations (Python, SQL, Statistics)
+- Months 4-6: Machine Learning (Scikit-learn, projects)
+- Months 7-9: Deep Learning (PyTorch, specialization)
+- Months 10-12: Production & Career (MLOps, portfolio)
+
+---
+
+## Requirements
+
+| Requirement | Version |
+|-------------|---------|
+| Python | 3.8+ |
+| PyTorch | 1.10+ |
+| TensorFlow | 2.8+ |
+| Scikit-learn | 1.0+ |
+| Docker | Latest |
+
+---
+
+## Best Practices
+
+- **Python**: Use type hints, virtual environments
+- **ML**: Cross-validation, proper train/test splits
+- **Deep Learning**: GPU acceleration, mixed precision
+- **MLOps**: Containerization, version control for models
+- **Data**: Feature engineering, data quality checks
+- **Career**: Portfolio projects, continuous learning
+
+---
+
+## Metadata
+
+| Field | Value |
+|-------|-------|
+| **Last Updated** | 2025-12-28 |
+| **Maintenance Status** | Active |
+| **SASMP Version** | 1.3.0 |
+| **Support** | [Issues](../../issues) |
+
+---
+
+## License
+
+MIT License - See [LICENSE](LICENSE) for details.
+
+---
+
+## Contributing
+
+Contributions are welcome:
+
+1. Fork the repository
+2. Create a feature branch
+3. Follow the Golden Format for new skills
+4. Submit a pull request
+
+---
+
+## Contributors
+
+**Authors:**
+- **Dr. Umit Kacar** - Senior AI Researcher & Engineer
+- **Muhsin Elcicek** - Senior Software Architect
+
+---
+
+<div align="center">
+
+**Master AI & Data Science with AI assistance!**
+
+[![Made for AI](https://img.shields.io/badge/Made%20for-AI%20Engineers-EE4C2C?style=for-the-badge&logo=pytorch)](https://github.com/pluginagentmarketplace/custom-plugin-ai-data-scientist)
+
+**Built by Dr. Umit Kacar & Muhsin Elcicek**
+
+*Based on [roadmap.sh/ai-data-scientist](https://roadmap.sh/ai-data-scientist)*
+
+</div>

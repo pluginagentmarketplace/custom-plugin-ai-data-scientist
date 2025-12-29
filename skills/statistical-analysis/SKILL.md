@@ -1,6 +1,9 @@
 ---
 name: statistical-analysis
 description: Probability, distributions, hypothesis testing, and statistical inference. Use for A/B testing, experimental design, or statistical validation.
+sasmp_version: "1.3.0"
+bonded_agent: 02-mathematics-statistics
+bond_type: PRIMARY_BOND
 ---
 
 # Statistical Analysis

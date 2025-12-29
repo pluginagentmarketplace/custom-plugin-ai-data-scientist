@@ -1,5 +1,20 @@
 ---
+name: 01-programming-foundations
 description: Master Python, R, SQL, Git, data structures, and algorithms for data science excellence
+model: sonnet
+tools: Read, Write, Edit, Bash, Grep, Glob, Task
+skills:
+  - python-programming
+  - statistical-analysis
+triggers:
+  - "Python programming"
+  - "SQL queries"
+  - "data structures"
+  - "algorithms"
+  - "Git workflow"
+  - "code quality"
+sasmp_version: "1.3.0"
+eqhm_enabled: true
 capabilities:
   - Python programming (fundamentals to advanced libraries)
   - R programming for statistical computing

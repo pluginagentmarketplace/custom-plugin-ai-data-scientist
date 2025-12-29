@@ -1,0 +1,152 @@
+# Data Visualization Chart Styles Configuration
+# Professional styling for data science visualizations
+
+# Color Palettes
+palettes:
+  # Default palette - professional and accessible
+  default:
+    primary: ["#2563eb", "#3b82f6", "#60a5fa", "#93c5fd", "#bfdbfe"]
+    secondary: ["#7c3aed", "#8b5cf6", "#a78bfa", "#c4b5fd", "#ddd6fe"]
+    accent: ["#059669", "#10b981", "#34d399", "#6ee7b7", "#a7f3d0"]
+    warning: ["#d97706", "#f59e0b", "#fbbf24", "#fcd34d", "#fde68a"]
+    danger: ["#dc2626", "#ef4444", "#f87171", "#fca5a5", "#fecaca"]
+
+  # Categorical palette (colorblind-friendly)
+  categorical:
+    - "#0077BB"  # Blue
+    - "#EE7733"  # Orange
+    - "#009988"  # Teal
+    - "#CC3311"  # Red
+    - "#33BBEE"  # Cyan
+    - "#EE3377"  # Magenta
+    - "#BBBBBB"  # Grey
+
+  # Sequential palettes
+  sequential:
+    blues: ["#f7fbff", "#deebf7", "#c6dbef", "#9ecae1", "#6baed6", "#4292c6", "#2171b5", "#084594"]
+    greens: ["#f7fcf5", "#e5f5e0", "#c7e9c0", "#a1d99b", "#74c476", "#41ab5d", "#238b45", "#005a32"]
+    reds: ["#fff5f0", "#fee0d2", "#fcbba1", "#fc9272", "#fb6a4a", "#ef3b2c", "#cb181d", "#99000d"]
+
+  # Diverging palettes
+  diverging:
+    red_blue: ["#d73027", "#f46d43", "#fdae61", "#fee090", "#e0f3f8", "#abd9e9", "#74add1", "#4575b4"]
+    purple_green: ["#762a83", "#9970ab", "#c2a5cf", "#e7d4e8", "#d9f0d3", "#a6dba0", "#5aae61", "#1b7837"]
+
+# Chart Type Configurations
+chart_types:
+  bar:
+    orientation: "vertical"  # vertical, horizontal
+    bar_width: 0.8
+    show_values: true
+    value_format: ".1f"
+    edge_color: "white"
+    edge_width: 0.5
+
+  line:
+    line_width: 2
+    marker_size: 6
+    marker_style: "o"
+    show_markers: true
+    alpha: 0.9
+    interpolation: "linear"  # linear, spline, step
+
+  scatter:
+    marker_size: 50
+    alpha: 0.7
+    edge_color: "white"
+    edge_width: 0.5
+
+  histogram:
+    bins: 30
+    alpha: 0.7
+    edge_color: "white"
+    density: false
+    show_kde: true
+
+  heatmap:
+    cmap: "coolwarm"
+    center: 0
+    annot: true
+    fmt: ".2f"
+    square: true
+    linewidths: 0.5
+
+  boxplot:
+    show_outliers: true
+    show_means: true
+    width: 0.6
+    notch: false
+
+  pie:
+    autopct: "%1.1f%%"
+    startangle: 90
+    explode_max: 0.05
+    shadow: false
+
+# Figure Settings
+figure:
+  # Size presets
+  sizes:
+    small: [6, 4]
+    medium: [10, 6]
+    large: [14, 8]
+    wide: [16, 6]
+    square: [8, 8]
+
+  # DPI settings
+  dpi:
+    screen: 100
+    publication: 300
+    poster: 600
+
+  # Background
+  background:
+    figure: "white"
+    axes: "white"
+
+  # Grid
+  grid:
+    show: true
+    alpha: 0.3
+    style: "-"
+    which: "major"
+
+# Typography
+typography:
+  font_family: "sans-serif"
+
+  sizes:
+    title: 16
+    subtitle: 14
+    axis_label: 12
+    tick_label: 10
+    legend: 10
+    annotation: 9
+
+  weights:
+    title: "bold"
+    axis_label: "normal"
+    tick_label: "normal"
+
+# Export Settings
+export:
+  formats: ["png", "pdf", "svg"]
+  default_format: "png"
+  dpi: 300
+  transparent: false
+  bbox_inches: "tight"
+  pad_inches: 0.1
+
+# Accessibility
+accessibility:
+  # Colorblind-friendly mode
+  colorblind_safe: true
+
+  # Minimum contrast ratio
+  min_contrast: 4.5
+
+  # Pattern fills for charts
+  use_patterns: false
+
+  # Large text mode
+  large_text: false

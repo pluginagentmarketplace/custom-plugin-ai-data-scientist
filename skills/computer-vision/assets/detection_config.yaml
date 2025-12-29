@@ -1,0 +1,130 @@
+# Computer Vision Object Detection Configuration
+# Supports YOLO, Faster R-CNN, SSD architectures
+
+# Model Configuration
+model:
+  architecture: "yolov8"  # yolov8, yolov5, faster_rcnn, ssd
+  backbone: "csp_darknet"  # csp_darknet, resnet50, mobilenetv3
+  pretrained: true
+  num_classes: 80  # COCO default
+
+  # Input Configuration
+  input:
+    size: [640, 640]  # width, height
+    channels: 3
+    normalize: true
+    mean: [0.485, 0.456, 0.406]
+    std: [0.229, 0.224, 0.225]
+
+  # Anchor Configuration (for anchor-based detectors)
+  anchors:
+    enabled: true
+    sizes: [[10, 13], [16, 30], [33, 23],
+            [30, 61], [62, 45], [59, 119],
+            [116, 90], [156, 198], [373, 326]]
+    strides: [8, 16, 32]
+
+# Detection Settings
+detection:
+  confidence_threshold: 0.25
+  nms_threshold: 0.45
+  max_detections: 100
+
+  # Multi-scale inference
+  multi_scale:
+    enabled: false
+    scales: [0.5, 1.0, 1.5]
+
+# Training Configuration
+training:
+  epochs: 100
+  batch_size: 16
+
+  optimizer:
+    name: "sgd"
+    lr: 0.01
+    momentum: 0.937
+    weight_decay: 0.0005
+    nesterov: true
+
+  scheduler:
+    name: "cosine"
+    warmup_epochs: 3
+    warmup_momentum: 0.8
+    warmup_bias_lr: 0.1
+
+  # Loss weights
+  loss:
+    box: 0.05
+    cls: 0.5
+    obj: 1.0
+
+# Data Augmentation
+augmentation:
+  # Mosaic augmentation
+  mosaic: 1.0
+  mosaic_scale: [0.5, 1.5]
+
+  # MixUp augmentation
+  mixup: 0.1
+
+  # Standard augmentations
+  hsv_h: 0.015  # Hue
+  hsv_s: 0.7    # Saturation
+  hsv_v: 0.4    # Value
+
+  # Geometric
+  degrees: 0.0
+  translate: 0.1
+  scale: 0.5
+  shear: 0.0
+  perspective: 0.0
+  flipud: 0.0
+  fliplr: 0.5
+
+# Dataset Configuration
+dataset:
+  format: "coco"  # coco, yolo, voc, custom
+  train_path: "data/train"
+  val_path: "data/val"
+  test_path: "data/test"
+
+  # Class mapping
+  classes:
+    0: "person"
+    1: "bicycle"
+    2: "car"
+    # ... add your classes
+
+# Evaluation Metrics
+evaluation:
+  iou_thresholds: [0.5, 0.75]
+  metrics:
+    - "mAP@0.5"
+    - "mAP@0.5:0.95"
+    - "precision"
+    - "recall"
+    - "f1"
+
+# Export Configuration
+export:
+  formats:
+    - "onnx"
+    - "torchscript"
+    - "tensorrt"
+
+  onnx:
+    opset: 12
+    simplify: true
+    dynamic: false
+
+  tensorrt:
+    fp16: true
+    int8: false
+    workspace: 4  # GB
+
+# Hardware
+hardware:
+  device: "cuda:0"
+  workers: 8
+  pin_memory: true

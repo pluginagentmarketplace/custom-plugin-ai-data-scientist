@@ -1,0 +1,50 @@
+# Machine Learning Model Configuration Template
+# Use this template for consistent ML project configurations
+
+model:
+  name: "random_forest_classifier"
+  type: "classification"  # classification, regression, clustering
+  random_state: 42
+
+data:
+  test_size: 0.2
+  validation_size: 0.1
+  shuffle: true
+  stratify: true
+
+hyperparameters:
+  n_estimators: 100
+  max_depth: null
+  min_samples_split: 2
+  min_samples_leaf: 1
+  max_features: "sqrt"
+
+training:
+  cross_validation:
+    enabled: true
+    folds: 5
+    scoring: "accuracy"  # accuracy, f1, roc_auc, precision, recall
+
+  early_stopping:
+    enabled: false
+    patience: 10
+
+evaluation:
+  metrics:
+    - accuracy
+    - precision
+    - recall
+    - f1_score
+    - roc_auc
+    - confusion_matrix
+
+  plots:
+    - roc_curve
+    - confusion_matrix
+    - feature_importance
+    - learning_curve
+
+output:
+  model_path: "models/"
+  metrics_path: "results/"
+  save_format: "joblib"  # joblib, pickle, onnx

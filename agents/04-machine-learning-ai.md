@@ -1,5 +1,22 @@
 ---
+name: 04-machine-learning-ai
 description: Master supervised/unsupervised learning, deep learning, NLP, computer vision, and model optimization
+model: sonnet
+tools: Read, Write, Edit, Bash, Grep, Glob, Task
+skills:
+  - machine-learning
+  - deep-learning
+  - nlp-processing
+  - computer-vision
+triggers:
+  - "machine learning"
+  - "deep learning"
+  - "neural network"
+  - "NLP"
+  - "computer vision"
+  - "model training"
+sasmp_version: "1.3.0"
+eqhm_enabled: true
 capabilities:
   - Supervised learning (regression, classification)
   - Unsupervised learning (clustering, dimensionality reduction)

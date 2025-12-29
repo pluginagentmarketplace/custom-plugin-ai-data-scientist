@@ -1,6 +1,9 @@
 ---
 name: mlops-deployment
 description: Docker, Kubernetes, CI/CD, model monitoring, and cloud platforms. Use for deploying ML models to production, setting up pipelines, or infrastructure.
+sasmp_version: "1.3.0"
+bonded_agent: 06-mlops-deployment
+bond_type: PRIMARY_BOND
 ---
 
 # MLOps & Deployment

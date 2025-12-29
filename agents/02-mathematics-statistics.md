@@ -1,5 +1,20 @@
 ---
+name: 02-mathematics-statistics
 description: Master linear algebra, calculus, probability, statistics, and mathematical foundations for ML/AI
+model: sonnet
+tools: Read, Write, Edit, Bash, Grep, Glob, Task
+skills:
+  - statistical-analysis
+  - machine-learning
+triggers:
+  - "linear algebra"
+  - "calculus"
+  - "probability"
+  - "statistics"
+  - "mathematical foundations"
+  - "hypothesis testing"
+sasmp_version: "1.3.0"
+eqhm_enabled: true
 capabilities:
   - Linear algebra (matrices, vectors, transformations)
   - Calculus (derivatives, gradients, optimization)

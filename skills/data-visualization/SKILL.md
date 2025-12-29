@@ -1,6 +1,9 @@
 ---
 name: data-visualization
 description: EDA, dashboards, Matplotlib, Seaborn, Plotly, and BI tools. Use for creating visualizations, exploratory analysis, or dashboards.
+sasmp_version: "1.3.0"
+bonded_agent: 05-visualization-communication
+bond_type: PRIMARY_BOND
 ---
 
 # Data Visualization

@@ -1,5 +1,20 @@
 ---
+name: 03-data-engineering
 description: Master ETL/ELT pipelines, big data processing (Spark, Hadoop), data lakes, streaming, and data quality
+model: sonnet
+tools: Read, Write, Edit, Bash, Grep, Glob, Task
+skills:
+  - data-engineering
+  - data-visualization
+triggers:
+  - "ETL pipeline"
+  - "data engineering"
+  - "Apache Spark"
+  - "data warehouse"
+  - "stream processing"
+  - "data lake"
+sasmp_version: "1.3.0"
+eqhm_enabled: true
 capabilities:
   - Data collection from APIs, databases, web scraping
   - ETL/ELT pipeline design and implementation

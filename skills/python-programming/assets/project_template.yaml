@@ -1,0 +1,167 @@
+# Python Data Science Project Configuration Template
+# Standard project setup for reproducibility
+
+# Project Metadata
+project:
+  name: "data-science-project"
+  version: "1.0.0"
+  description: "Data science project template"
+  python_version: "3.10"
+
+# Directory Structure
+structure:
+  directories:
+    - "data/raw"
+    - "data/processed"
+    - "data/external"
+    - "notebooks"
+    - "src"
+    - "src/data"
+    - "src/features"
+    - "src/models"
+    - "src/visualization"
+    - "tests"
+    - "reports"
+    - "reports/figures"
+    - "models"
+    - "configs"
+
+  files:
+    - path: "README.md"
+      template: "readme"
+    - path: "requirements.txt"
+      template: "requirements"
+    - path: "setup.py"
+      template: "setup"
+    - path: ".gitignore"
+      template: "gitignore"
+    - path: "src/__init__.py"
+      content: ""
+
+# Dependencies
+dependencies:
+  core:
+    - "numpy>=1.24.0"
+    - "pandas>=2.0.0"
+    - "scikit-learn>=1.3.0"
+    - "scipy>=1.11.0"
+
+  visualization:
+    - "matplotlib>=3.7.0"
+    - "seaborn>=0.12.0"
+    - "plotly>=5.15.0"
+
+  data:
+    - "pyarrow>=12.0.0"
+    - "openpyxl>=3.1.0"
+    - "sqlalchemy>=2.0.0"
+
+  ml:
+    - "xgboost>=1.7.0"
+    - "lightgbm>=4.0.0"
+    - "optuna>=3.2.0"
+
+  deep_learning:  # optional
+    - "torch>=2.0.0"
+    - "tensorflow>=2.13.0"
+
+  development:
+    - "jupyter>=1.0.0"
+    - "pytest>=7.4.0"
+    - "black>=23.7.0"
+    - "flake8>=6.1.0"
+    - "mypy>=1.4.0"
+
+# Code Style Configuration
+code_style:
+  formatter: "black"
+  linter: "flake8"
+  type_checker: "mypy"
+
+  black:
+    line_length: 88
+    target_version: ["py310"]
+
+  flake8:
+    max_line_length: 88
+    ignore:
+      - "E203"  # whitespace before ':'
+      - "E501"  # line too long (handled by black)
+      - "W503"  # line break before binary operator
+
+  mypy:
+    python_version: "3.10"
+    strict: true
+    ignore_missing_imports: true
+
+# Testing Configuration
+testing:
+  framework: "pytest"
+  coverage_threshold: 80
+
+  pytest:
+    options:
+      - "-v"
+      - "--cov=src"
+      - "--cov-report=html"
+    markers:
+      - "slow: marks tests as slow"
+      - "integration: marks tests as integration tests"
+
+# Git Configuration
+git:
+  ignore_patterns:
+    - "__pycache__/"
+    - "*.py[cod]"
+    - ".env"
+    - "*.egg-info/"
+    - "dist/"
+    - "build/"
+    - ".pytest_cache/"
+    - ".mypy_cache/"
+    - "*.ipynb_checkpoints"
+    - "data/raw/*"
+    - "data/processed/*"
+    - "models/*.pkl"
+    - "models/*.h5"
+    - "!data/raw/.gitkeep"
+    - "!data/processed/.gitkeep"
+
+  pre_commit_hooks:
+    - "black"
+    - "flake8"
+    - "mypy"
+    - "pytest"
+
+# Environment Variables
+environment:
+  required:
+    - "DATA_PATH"
+    - "MODEL_PATH"
+  optional:
+    - "MLFLOW_TRACKING_URI"
+    - "WANDB_API_KEY"
+
+# Logging Configuration
+logging:
+  version: 1
+  disable_existing_loggers: false
+
+  formatters:
+    standard:
+      format: "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+
+  handlers:
+    console:
+      class: "logging.StreamHandler"
+      level: "INFO"
+      formatter: "standard"
+    file:
+      class: "logging.FileHandler"
+      filename: "logs/app.log"
+      level: "DEBUG"
+      formatter: "standard"
+
+  root:
+    level: "INFO"
+    handlers: ["console", "file"]

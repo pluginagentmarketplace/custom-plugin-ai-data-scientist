@@ -1,0 +1,107 @@
+# NLP Processing Configuration
+# Text preprocessing and model configuration
+
+# Preprocessing Pipeline
+preprocessing:
+  # Tokenization
+  tokenizer:
+    type: "wordpiece"  # wordpiece, bpe, sentencepiece, whitespace
+    vocab_size: 30000
+    lowercase: true
+    strip_accents: true
+
+  # Text cleaning
+  cleaning:
+    remove_html: true
+    remove_urls: true
+    remove_emails: true
+    remove_numbers: false
+    remove_punctuation: false
+    remove_extra_whitespace: true
+    min_length: 3
+
+  # Normalization
+  normalization:
+    unicode_normalize: "NFC"
+    expand_contractions: true
+    correct_spelling: false
+
+  # Stopwords
+  stopwords:
+    enabled: true
+    language: "english"
+    custom_stopwords:
+      - "etc"
+      - "also"
+
+  # Stemming/Lemmatization
+  stemming:
+    enabled: false
+    type: "porter"  # porter, snowball, lancaster
+
+  lemmatization:
+    enabled: true
+    pos_tag: true
+
+# Embedding Configuration
+embeddings:
+  type: "transformer"  # word2vec, glove, fasttext, transformer
+
+  word2vec:
+    vector_size: 300
+    window: 5
+    min_count: 2
+    workers: 4
+
+  transformer:
+    model: "bert-base-uncased"
+    max_length: 512
+    pooling: "mean"  # cls, mean, max
+
+# Model Configuration
+model:
+  task: "classification"  # classification, ner, generation, qa
+
+  classification:
+    architecture: "bert"
+    num_labels: 5
+    dropout: 0.1
+    hidden_size: 768
+
+  training:
+    epochs: 5
+    batch_size: 16
+    learning_rate: 2e-5
+    warmup_steps: 500
+    weight_decay: 0.01
+    gradient_accumulation_steps: 2
+
+  # Optimization
+  optimizer:
+    name: "adamw"
+    betas: [0.9, 0.999]
+    epsilon: 1e-8
+
+  scheduler:
+    name: "linear"
+    warmup_ratio: 0.1
+
+# Evaluation
+evaluation:
+  metrics:
+    - "accuracy"
+    - "f1_macro"
+    - "precision"
+    - "recall"
+    - "confusion_matrix"
+
+  validation_split: 0.2
+  test_split: 0.1
+
+# Output
+output:
+  save_model: true
+  save_tokenizer: true
+  output_dir: "models/nlp"
+  logging_steps: 100
+  save_steps: 500
