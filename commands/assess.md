@@ -1,3 +1,9 @@
+---
+name: assess
+description: AI & Data Scientist Knowledge Assessment
+allowed-tools: Read
+---
+
 # AI & Data Scientist Knowledge Assessment
 
 Evaluate your current skills across all domains and get personalized recommendations.

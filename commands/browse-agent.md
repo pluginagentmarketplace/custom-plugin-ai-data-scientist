@@ -1,3 +1,9 @@
+---
+name: browse-agent
+description: Explore AI & Data Scientist Agents
+allowed-tools: Read
+---
+
 # Explore AI & Data Scientist Agents
 
 Discover all 7 specialized agents designed to master every aspect of data science and AI.

@@ -1,3 +1,9 @@
+---
+name: learn
+description: Start Your AI & Data Scientist Learning Journey
+allowed-tools: Read
+---
+
 # Start Your AI & Data Scientist Learning Journey
 
 Welcome to the comprehensive AI & Data Scientist learning path! Let me guide you through a personalized learning journey.

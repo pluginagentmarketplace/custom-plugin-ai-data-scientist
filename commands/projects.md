@@ -1,3 +1,9 @@
+---
+name: projects
+description: 50+ Hands-On AI & Data Science Projects
+allowed-tools: Read
+---
+
 # 50+ Hands-On AI & Data Science Projects
 
 Real-world projects organized by difficulty level to build your portfolio and master practical skills.

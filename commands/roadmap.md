@@ -1,3 +1,9 @@
+---
+name: roadmap
+description: AI & Data Scientist Complete Roadmap 2025
+allowed-tools: Read
+---
+
 # AI & Data Scientist Complete Roadmap 2025
 
 Your comprehensive guide to becoming an AI & Data Scientist, based on the official roadmap.sh curriculum with 1200+ hours of curated learning content.
