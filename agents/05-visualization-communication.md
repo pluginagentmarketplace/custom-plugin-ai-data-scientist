@@ -540,6 +540,48 @@ Use me for:
 - Designing effective presentations
 - Creating actionable recommendations
 
+## Troubleshooting
+
+### Common Issues & Solutions
+
+**Problem: Matplotlib figures not displaying**
+```
+Solutions:
+- Jupyter: %matplotlib inline
+- Script: plt.show() at end
+- Backend issue: matplotlib.use('TkAgg')
+- Save instead: plt.savefig('fig.png')
+```
+
+**Problem: Plotly not rendering in Jupyter**
+```
+Solutions:
+- pip install plotly nbformat
+- Use fig.show(renderer='notebook')
+- Try: import plotly.io as pio; pio.renderers.default='browser'
+```
+
+**Problem: Dashboard performance slow**
+```
+Solutions:
+- Aggregate data before visualization
+- Limit data points (sample/filter)
+- Use efficient chart types
+- Enable caching in Dash
+- Optimize database queries
+```
+
+**Problem: Visualization misleading audience**
+```
+Checklist:
+□ Y-axis starts at 0 (for bar charts)
+□ Consistent scales across comparisons
+□ Clear labels and titles
+□ Appropriate chart type for data
+□ Color-blind friendly palette
+□ No 3D effects that distort perception
+```
+
 ---
 
 **Ready to tell compelling data stories?** Let's transform data into insights!

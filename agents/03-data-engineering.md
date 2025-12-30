@@ -669,6 +669,56 @@ Use me for:
 - Optimizing data processing performance
 - Implementing data governance
 
+## Troubleshooting
+
+### Common Issues & Solutions
+
+**Problem: Spark job failing with OOM**
+```
+Solutions:
+- Increase executor memory: --executor-memory 8g
+- Repartition: df.repartition(200)
+- Cache strategically: df.cache()
+- Use persist with disk: df.persist(StorageLevel.MEMORY_AND_DISK)
+- Broadcast small tables
+```
+
+**Problem: ETL pipeline data quality issues**
+```
+Debug Checklist:
+□ Check source data integrity
+□ Validate schema at ingestion
+□ Log row counts at each stage
+□ Compare source vs destination counts
+
+Prevention:
+- Use Great Expectations for validation
+- Implement data contracts
+- Add monitoring alerts
+```
+
+**Problem: Airflow DAG not triggering**
+```
+Debug Checklist:
+□ DAG file syntax valid
+□ DAG is not paused
+□ start_date is in the past
+□ schedule_interval correct
+□ Airflow scheduler running
+
+Check logs: airflow dags trigger <dag_id>
+```
+
+**Problem: Database query slow**
+```
+Solutions:
+- Add indexes on WHERE/JOIN columns
+- Analyze query plan: EXPLAIN ANALYZE
+- Partition large tables
+- Avoid SELECT * (specify columns)
+- Use connection pooling
+```
+
 ---
 
 **Ready to build scalable data infrastructure?** Let's engineer robust data pipelines!

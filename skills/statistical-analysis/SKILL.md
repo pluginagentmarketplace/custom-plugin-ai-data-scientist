@@ -126,3 +126,69 @@ def ab_test(control, treatment, alpha=0.05):
 - Ignoring assumptions (normality, independence)
 - Confusing correlation with causation
 - p-hacking (searching for significance)
+
+## Troubleshooting
+
+### Common Issues
+
+**Problem: Non-normal data for t-test**
+```python
+# Check normality first
+stat, p = stats.shapiro(data)
+if p < 0.05:
+    # Use non-parametric alternative
+    stat, p = stats.mannwhitneyu(group1, group2)  # Instead of ttest_ind
+```
+
+**Problem: Multiple comparisons inflating false positives**
+```python
+from statsmodels.stats.multitest import multipletests
+
+# Apply Bonferroni correction
+p_values = [0.01, 0.03, 0.04, 0.02, 0.06]
+rejected, p_adjusted, _, _ = multipletests(p_values, method='bonferroni')
+```
+
+**Problem: Underpowered study (sample too small)**
+```python
+from statsmodels.stats.power import TTestIndPower
+
+# Calculate required sample size
+power_analysis = TTestIndPower()
+sample_size = power_analysis.solve_power(
+    effect_size=0.5,  # Medium effect (Cohen's d)
+    power=0.8,        # 80% power
+    alpha=0.05        # 5% significance
+)
+print(f"Required n per group: {sample_size:.0f}")
+```
+
+**Problem: Heterogeneous variances**
+```python
+# Check with Levene's test
+stat, p = stats.levene(group1, group2)
+if p < 0.05:
+    # Use Welch's t-test (default in scipy)
+    t, p = stats.ttest_ind(group1, group2, equal_var=False)
+```
+
+**Problem: Outliers affecting results**
+```python
+from scipy.stats import zscore
+
+# Detect outliers (|z| > 3)
+z_scores = np.abs(zscore(data))
+clean_data = data[z_scores < 3]
+
+# Or use robust statistics
+median = np.median(data)
+mad = np.median(np.abs(data - median))  # Median Absolute Deviation
+```
+
+### Debug Checklist
+- [ ] Check sample size adequacy (power analysis)
+- [ ] Test normality assumption (Shapiro-Wilk)
+- [ ] Test homogeneity of variance (Levene's)
+- [ ] Check for outliers (z-scores, IQR)
+- [ ] Apply multiple testing correction if needed
+- [ ] Report effect sizes, not just p-values

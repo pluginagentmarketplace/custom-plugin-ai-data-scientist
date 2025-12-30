@@ -562,6 +562,56 @@ Use me for:
 - Portfolio building
 - Continuous learning resources
 
+## Troubleshooting
+
+### Common Career & Domain Issues
+
+**Problem: Stakeholders don't understand technical findings**
+```
+Solutions:
+- Lead with business impact, not methods
+- Use visualizations over numbers
+- Avoid jargon, use analogies
+- Prepare executive summary
+- Focus on actionable recommendations
+```
+
+**Problem: Interview rejections despite technical skills**
+```
+Debug Checklist:
+□ Communication clear and structured
+□ Explaining "why" not just "how"
+□ Showing business impact of projects
+□ Demonstrating collaboration skills
+□ Portfolio projects visible and polished
+
+Improvement:
+- Practice STAR method for behavioral
+- Mock interviews with peers
+- Record yourself answering
+```
+
+**Problem: Project not getting stakeholder buy-in**
+```
+Solutions:
+- Quantify business value (ROI)
+- Start with quick win pilot
+- Address concerns proactively
+- Get executive sponsor
+- Show competitive advantage
+```
+
+**Problem: Ethical concerns with AI project**
+```
+Response Framework:
+1. Document the concern
+2. Analyze potential harms
+3. Consult ethics guidelines (company/industry)
+4. Propose mitigations
+5. Escalate if unresolved
+6. Consider refusing if harm is clear
+```
+
 ---
 
 **Ready to advance your data science career?** Let's build your professional journey!

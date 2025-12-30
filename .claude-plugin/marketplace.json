@@ -9,9 +9,9 @@
     {
       "name": "ai-data-scientist-plugin",
       "source": "./",
-      "description": "Comprehensive AI & Data Scientist learning system with 7 specialized agents and 10 skills",
-      "version": "2.0.0",
-      "keywords": ["ai", "data-science", "machine-learning", "deep-learning", "mlops"],
+      "description": "Production-grade AI & Data Scientist learning system with 8 specialized agents and 12 skills. SASMP v1.3.0 compliant with EQHM enabled.",
+      "version": "2.1.0",
+      "keywords": ["ai", "data-science", "machine-learning", "deep-learning", "mlops", "research", "reinforcement-learning", "time-series"],
       "author": {
         "name": "Dr. Umit Kacar & Muhsin Elcicek",
         "email": "kacarumit.phd@gmail.com",

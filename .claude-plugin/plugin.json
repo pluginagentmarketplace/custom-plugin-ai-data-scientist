@@ -1,7 +1,7 @@
 {
   "name": "ai-data-scientist-plugin",
-  "version": "2.0.0",
-  "description": "Comprehensive AI & Data Scientist learning system with 7 specialized agents, 10 skills, and complete roadmap coverage. Master programming, ML/AI, data engineering, visualization, MLOps, and career development.",
+  "version": "2.1.0",
+  "description": "Production-grade AI & Data Scientist learning system with 8 specialized agents, 12 skills, and complete roadmap coverage. Master programming, ML/AI, data engineering, visualization, MLOps, research, and career development. SASMP v1.3.0 compliant with EQHM enabled.",
   "author": {
     "name": "Dr. Umit Kacar & Muhsin Elcicek",
     "email": "kacarumit.phd@gmail.com",
@@ -22,6 +22,9 @@
     "visualization",
     "nlp",
     "computer-vision",
+    "reinforcement-learning",
+    "time-series",
+    "research",
     "claude-code",
     "plugin"
   ],
@@ -32,7 +35,8 @@
     "./agents/04-machine-learning-ai.md",
     "./agents/05-visualization-communication.md",
     "./agents/06-mlops-deployment.md",
-    "./agents/07-domain-career.md"
+    "./agents/07-domain-career.md",
+    "./agents/08-research-innovation.md"
   ],
   "skills": [
     "./skills/computer-vision/SKILL.md",
@@ -44,7 +48,9 @@
     "./skills/model-optimization/SKILL.md",
     "./skills/nlp-processing/SKILL.md",
     "./skills/python-programming/SKILL.md",
-    "./skills/statistical-analysis/SKILL.md"
+    "./skills/reinforcement-learning/SKILL.md",
+    "./skills/statistical-analysis/SKILL.md",
+    "./skills/time-series/SKILL.md"
   ],
   "commands": [
     "./commands/assess.md",

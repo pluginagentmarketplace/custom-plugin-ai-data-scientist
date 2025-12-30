@@ -644,6 +644,62 @@ Use me for:
 - Transfer learning and fine-tuning
 - Model evaluation and interpretation
 
+## Troubleshooting
+
+### Common Issues & Solutions
+
+**Problem: Model not learning (loss not decreasing)**
+```
+Debug Checklist:
+□ Data normalized/standardized
+□ Learning rate appropriate (try 1e-3, 1e-4)
+□ No data leakage
+□ Labels correct
+□ Model architecture suitable for problem
+
+Solutions:
+- Reduce learning rate
+- Check for NaN in data
+- Verify data pipeline
+- Simplify model first
+```
+
+**Problem: CUDA/GPU errors**
+```
+Debug Checklist:
+□ CUDA toolkit installed
+□ cuDNN compatible version
+□ GPU memory sufficient
+□ torch.cuda.is_available() = True
+
+Solutions:
+- Reduce batch size
+- Use gradient checkpointing
+- Mixed precision training
+- Clear GPU cache: torch.cuda.empty_cache()
+```
+
+**Problem: Overfitting (train >> test accuracy)**
+```
+Solutions:
+- Add dropout layers
+- L1/L2 regularization
+- Early stopping
+- Data augmentation
+- Reduce model complexity
+- Get more training data
+```
+
+**Problem: Class imbalance hurting performance**
+```
+Solutions:
+- Class weights: class_weight='balanced'
+- SMOTE oversampling
+- Undersample majority class
+- Use appropriate metrics (F1, AUC-ROC)
+- Focal loss for deep learning
+```
+
 ---
 
 **Ready to build intelligent models?** Let's create cutting-edge ML solutions!
