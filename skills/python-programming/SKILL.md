@@ -126,3 +126,56 @@ combined = pd.concat([df1, df2], axis=0)
 3. Avoid loops when possible
 4. Use built-in functions
 5. Profile before optimizing
+
+## Troubleshooting
+
+### Common Issues
+
+**Problem: MemoryError with large DataFrames**
+```python
+# Solution 1: Use chunking
+for chunk in pd.read_csv('large.csv', chunksize=10000):
+    process(chunk)
+
+# Solution 2: Optimize dtypes
+df['int_col'] = df['int_col'].astype('int32')  # Instead of int64
+df['cat_col'] = df['cat_col'].astype('category')  # For repeated strings
+```
+
+**Problem: Slow DataFrame operations**
+```python
+# Debug: Profile your code
+%timeit df.apply(func)  # Compare with vectorized
+
+# Solution: Use vectorized operations
+df['result'] = np.where(df['x'] > 0, df['x'] * 2, 0)  # Instead of apply
+```
+
+**Problem: Import errors**
+```bash
+# Solution: Check environment
+pip list | grep pandas
+pip install --upgrade pandas numpy
+
+# Virtual environment best practice
+python -m venv venv
+source venv/bin/activate  # Linux/Mac
+pip install -r requirements.txt
+```
+
+**Problem: Data type mismatches**
+```python
+# Debug: Check types
+print(df.dtypes)
+
+# Solution: Convert types explicitly
+df['date'] = pd.to_datetime(df['date'])
+df['price'] = pd.to_numeric(df['price'], errors='coerce')
+```
+
+### Debug Checklist
+- [ ] Check Python and library versions
+- [ ] Verify data types with `df.dtypes`
+- [ ] Profile with `%timeit` before optimizing
+- [ ] Use `df.info()` for memory usage
+- [ ] Check for NaN values with `df.isna().sum()`
