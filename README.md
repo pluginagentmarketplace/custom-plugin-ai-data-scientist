@@ -1,19 +1,19 @@
 <div align="center">
 
 <!-- Animated Typing Banner -->
-<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=28&duration=3000&pause=1000&color=2E9EF7&center=true&vCenter=true&multiline=true&repeat=true&width=600&height=100&lines=Ai+Data+Scientist+Assistant;7+Agents+%7C+10+Skills;Claude+Code+Plugin" alt="Ai Data Scientist Assistant" />
+<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=28&duration=3000&pause=1000&color=2E9EF7&center=true&vCenter=true&multiline=true&repeat=true&width=600&height=100&lines=Ai+Data+Scientist+Assistant;8+Agents+%7C+12+Skills;Claude+Code+Plugin" alt="Ai Data Scientist Assistant" />
 
 <br/>
 
 <!-- Badge Row 1: Status Badges -->
-[![Version](https://img.shields.io/badge/Version-2.0.0-blue?style=for-the-badge)](https://github.com/pluginagentmarketplace/custom-plugin-ai-data-scientist/releases)
+[![Version](https://img.shields.io/badge/Version-2.1.0-blue?style=for-the-badge)](https://github.com/pluginagentmarketplace/custom-plugin-ai-data-scientist/releases)
 [![License](https://img.shields.io/badge/License-Custom-yellow?style=for-the-badge)](LICENSE)
 [![Status](https://img.shields.io/badge/Status-Production-brightgreen?style=for-the-badge)](#)
 [![SASMP](https://img.shields.io/badge/SASMP-v1.3.0-blueviolet?style=for-the-badge)](#)
 
 <!-- Badge Row 2: Content Badges -->
-[![Agents](https://img.shields.io/badge/Agents-7-orange?style=flat-square&logo=robot)](#-agents)
-[![Skills](https://img.shields.io/badge/Skills-10-purple?style=flat-square&logo=lightning)](#-skills)
+[![Agents](https://img.shields.io/badge/Agents-8-orange?style=flat-square&logo=robot)](#-agents)
+[![Skills](https://img.shields.io/badge/Skills-12-purple?style=flat-square&logo=lightning)](#-skills)
 [![Commands](https://img.shields.io/badge/Commands-5-green?style=flat-square&logo=terminal)](#-commands)
 
 <br/>
@@ -25,7 +25,7 @@
 
 ### What is this?
 
-> **Ai Data Scientist Assistant** is a Claude Code plugin with **7 agents** and **10 skills** for ai data scientist development.
+> **Ai Data Scientist Assistant** is a production-grade Claude Code plugin with **8 agents** and **12 skills** for AI & Data Science development. SASMP v1.3.0 compliant with EQHM enabled.
 
 </div>
 
@@ -109,26 +109,28 @@ ai-data-scientist-plugin:05-visualization-communication
 
 | Feature | Description |
 |---------|-------------|
-| 🤖 **7 Agents** | Specialized AI agents for ai data scientist tasks |
-| 🛠️ **10 Skills** | Reusable capabilities with Golden Format |
-| ⌨️ **5 Commands** | Quick slash commands |
-| 🔄 **SASMP v1.3.0** | Full protocol compliance |
+| 🤖 **8 Agents** | Specialized AI agents with troubleshooting sections |
+| 🛠️ **12 Skills** | Production-grade capabilities including RL & Time Series |
+| ⌨️ **5 Commands** | Quick slash commands for learning & assessment |
+| 🔄 **SASMP v1.3.0** | Full protocol compliance with EQHM enabled |
+| 🔧 **Troubleshooting** | Built-in debug checklists & solutions for each agent |
 
 ---
 
 ## 🤖 Agents
 
-### 7 Specialized Agents
+### 8 Specialized Agents
 
 | # | Agent | Purpose |
 |---|-------|---------|
-| 1 | **02-mathematics-statistics** | Master linear algebra, calculus, probability, statistics, an |
-| 2 | **07-domain-career** | Business acumen, ethics, compliance, project management, car |
-| 3 | **03-data-engineering** | Master ETL/ELT pipelines, big data processing (Spark, Hadoop |
-| 4 | **04-machine-learning-ai** | Master supervised/unsupervised learning, deep learning, NLP, |
-| 5 | **05-visualization-communication** | Master EDA, dashboards, storytelling, BI tools (Tableau, Pow |
-| 6 | **06-mlops-deployment** | Master model deployment, Docker/Kubernetes, CI/CD, monitorin |
-| 7 | **01-programming-foundations** | Master Python, R, SQL, Git, data structures, and algorithms  |
+| 1 | **01-python-data-science** | Python, R, SQL, Git, data structures, algorithms |
+| 2 | **02-mathematics-statistics** | Linear algebra, calculus, probability, statistics |
+| 3 | **03-data-engineering** | ETL/ELT pipelines, Spark, Hadoop, data lakes |
+| 4 | **04-machine-learning-ai** | ML/DL, NLP, computer vision, model optimization |
+| 5 | **05-visualization-communication** | EDA, dashboards, storytelling, BI tools |
+| 6 | **06-mlops-deployment** | Docker, Kubernetes, CI/CD, monitoring |
+| 7 | **07-domain-career** | Business acumen, ethics, career development |
+| 8 | **08-research-innovation** | Research methodology, paper writing, experiments |
 
 ---
 
@@ -136,18 +138,20 @@ ai-data-scientist-plugin:05-visualization-communication
 
 ### Available Skills
 
-| Skill | Description | Invoke |
-|-------|-------------|--------|
-| `model-optimization` | Quantization, pruning, AutoML, hyperparameter tuning, and pe | `Skill("ai-data-scientist-plugin:model-optimization")` |
-| `deep-learning` | Neural networks, CNNs, RNNs, Transformers with TensorFlow an | `Skill("ai-data-scientist-plugin:deep-learning")` |
-| `data-visualization` | EDA, dashboards, Matplotlib, Seaborn, Plotly, and BI tools.  | `Skill("ai-data-scientist-plugin:data-visualization")` |
-| `statistical-analysis` | Probability, distributions, hypothesis testing, and statisti | `Skill("ai-data-scientist-plugin:statistical-analysis")` |
-| `data-engineering` | ETL pipelines, Apache Spark, data warehousing, and big data  | `Skill("ai-data-scientist-plugin:data-engineering")` |
-| `mlops-deployment` | Docker, Kubernetes, CI/CD, model monitoring, and cloud platf | `Skill("ai-data-scientist-plugin:mlops-deployment")` |
-| `computer-vision` | Image processing, object detection, segmentation, and vision | `Skill("ai-data-scientist-plugin:computer-vision")` |
-| `python-programming` | Python fundamentals, data structures, OOP, and data science  | `Skill("ai-data-scientist-plugin:python-programming")` |
-| `nlp-processing` | Text processing, sentiment analysis, LLMs, and NLP framework | `Skill("ai-data-scientist-plugin:nlp-processing")` |
-| `machine-learning` | Supervised/unsupervised learning, model selection, evaluatio | `Skill("ai-data-scientist-plugin:machine-learning")` |
+| Skill | Description |
+|-------|-------------|
+| `python-programming` | Python fundamentals, data structures, OOP, Pandas, NumPy |
+| `statistical-analysis` | Probability, distributions, hypothesis testing, A/B testing |
+| `data-engineering` | ETL pipelines, Apache Spark, data warehousing, streaming |
+| `machine-learning` | Supervised/unsupervised learning, scikit-learn, evaluation |
+| `deep-learning` | Neural networks, CNNs, RNNs, Transformers, PyTorch |
+| `nlp-processing` | Text processing, sentiment analysis, LLMs, BERT |
+| `computer-vision` | Image classification, object detection, segmentation |
+| `data-visualization` | EDA, Matplotlib, Seaborn, Plotly, dashboards |
+| `mlops-deployment` | Docker, Kubernetes, CI/CD, model monitoring |
+| `model-optimization` | Quantization, pruning, AutoML, hyperparameter tuning |
+| `reinforcement-learning` | Q-learning, DQN, PPO, multi-agent systems, Gym |
+| `time-series` | ARIMA, Prophet, forecasting, anomaly detection |
 
 ---
 
@@ -183,8 +187,8 @@ custom-plugin-ai-data-scientist/
 ├── 📁 .claude-plugin/
 │   ├── plugin.json
 │   └── marketplace.json
-├── 📁 agents/              # 7 agents
-├── 📁 skills/              # 10 skills (Golden Format)
+├── 📁 agents/              # 8 agents with troubleshooting
+├── 📁 skills/              # 12 skills (Production-grade)
 ├── 📁 commands/            # 5 commands
 ├── 📁 hooks/
 ├── 📄 README.md
@@ -200,12 +204,13 @@ custom-plugin-ai-data-scientist/
 
 | Field | Value |
 |-------|-------|
-| **Version** | 2.0.0 |
-| **Last Updated** | 2025-12-29 |
+| **Version** | 2.1.0 |
+| **Last Updated** | 2025-12-30 |
 | **Status** | Production Ready |
 | **SASMP** | v1.3.0 |
-| **Agents** | 7 |
-| **Skills** | 10 |
+| **EQHM** | Enabled |
+| **Agents** | 8 |
+| **Skills** | 12 |
 | **Commands** | 5 |
 
 ---

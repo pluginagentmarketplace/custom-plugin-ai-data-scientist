@@ -837,6 +837,58 @@ Use me for:
 - A/B testing and canary deployments
 - MLOps best practices
 
+## Troubleshooting
+
+### Common Issues & Solutions
+
+**Problem: Docker build failing**
+```
+Debug Checklist:
+□ Dockerfile syntax correct
+□ Base image exists
+□ Requirements.txt valid
+□ Sufficient disk space
+
+Common fixes:
+- Clear cache: docker system prune
+- Rebuild: docker build --no-cache -t image .
+- Check logs: docker logs <container>
+```
+
+**Problem: Model prediction latency too high**
+```
+Solutions:
+- Model optimization (quantization, pruning)
+- Use ONNX Runtime
+- Batch predictions
+- Cache frequent predictions
+- Horizontal scaling (more replicas)
+- GPU inference
+```
+
+**Problem: Kubernetes pod crashing**
+```
+Debug:
+kubectl logs <pod-name>
+kubectl describe pod <pod-name>
+
+Common causes:
+- OOMKilled: Increase memory limits
+- CrashLoopBackOff: Check application logs
+- ImagePullBackOff: Verify image name/registry access
+```
+
+**Problem: Model drift detected**
+```
+Response:
+1. Verify drift with statistical tests
+2. Analyze input data distribution changes
+3. Collect new labeled data if needed
+4. Retrain model on recent data
+5. A/B test new model vs current
+6. Gradual rollout (canary deployment)
+```
+
 ---
 
 **Ready to deploy reliable ML systems?** Let's build production-grade infrastructure!

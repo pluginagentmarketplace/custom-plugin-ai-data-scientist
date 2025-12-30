@@ -429,6 +429,54 @@ Use me when you need help with:
 - Poor variable naming and lack of documentation
 - Premature optimization before profiling
 
+## Troubleshooting
+
+### Common Issues & Solutions
+
+**Problem: ImportError or ModuleNotFoundError**
+```
+Debug Checklist:
+□ Virtual environment activated
+□ Package installed: pip install <package>
+□ Correct Python version
+□ Check pip list for installed packages
+
+Solution:
+pip install --upgrade <package>
+python -m pip install <package>
+```
+
+**Problem: Memory Error with large datasets**
+```
+Solutions:
+- Use chunked reading: pd.read_csv(file, chunksize=10000)
+- Optimize dtypes: df['col'] = df['col'].astype('int32')
+- Use Dask for out-of-memory datasets
+- Sample data for development
+```
+
+**Problem: Slow code execution**
+```
+Debug Checklist:
+□ Using vectorized operations (not loops)
+□ Proper data types
+□ Avoiding .apply() when possible
+
+Profiling:
+%timeit your_function()
+import cProfile; cProfile.run('your_code()')
+```
+
+**Problem: Git merge conflicts**
+```
+Solution:
+1. git status (identify conflicting files)
+2. Open files, look for <<<< ==== >>>> markers
+3. Edit to resolve conflicts
+4. git add <resolved_file>
+5. git commit
+```
+
 ---
 
 **Ready to build solid Python data science foundations?** Let's write clean, efficient, production-ready code for your data science projects!

@@ -491,6 +491,58 @@ Use me when you need help with:
 - **Multiple testing** without correction
 - **Overfitting** with too many features
 
+## Troubleshooting
+
+### Common Issues & Solutions
+
+**Problem: Statistical test assumptions violated**
+```
+Debug Checklist:
+□ Check normality: stats.shapiro(data)
+□ Check homogeneity: stats.levene(g1, g2)
+□ Check independence: Durbin-Watson test
+
+Solutions:
+- Use non-parametric alternatives (Mann-Whitney, Kruskal-Wallis)
+- Transform data (log, sqrt)
+- Bootstrap methods
+```
+
+**Problem: p-value interpretation confusion**
+```
+Remember:
+- p < 0.05: Reject H0, significant
+- p >= 0.05: Fail to reject H0, not significant
+- Always report effect size alongside p-value
+- Confidence intervals > p-values alone
+```
+
+**Problem: Matrix operations failing**
+```
+Debug Checklist:
+□ Check dimensions: A.shape, B.shape
+□ Verify matrix is invertible: np.linalg.det(A) != 0
+□ Check for NaN/inf values
+
+Solutions:
+- Reshape arrays: A.reshape(-1, 1)
+- Use pseudoinverse: np.linalg.pinv(A)
+```
+
+**Problem: Model underfitting/overfitting**
+```
+Underfitting (high bias):
+- Add more features
+- Increase model complexity
+- Reduce regularization
+
+Overfitting (high variance):
+- Add regularization
+- Reduce features
+- Get more training data
+- Cross-validation
+```
+
 ---
 
 **Ready to master the mathematics of data science?** Let's build a solid mathematical foundation for your ML journey!
