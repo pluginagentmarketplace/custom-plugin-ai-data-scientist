@@ -2,7 +2,7 @@
 name: python-programming
 description: Python fundamentals, data structures, OOP, and data science libraries (Pandas, NumPy). Use when writing Python code, data manipulation, or algorithm implementation.
 sasmp_version: "1.3.0"
-bonded_agent: 01-programming-foundations
+bonded_agent: 01-python-data-science
 bond_type: PRIMARY_BOND
 ---
 
