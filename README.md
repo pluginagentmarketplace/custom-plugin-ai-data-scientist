@@ -63,7 +63,7 @@
 
 ```bash
 # Step 1️⃣ Add the marketplace
-/plugin add marketplace pluginagentmarketplace/custom-plugin-ai-data-scientist
+/plugin marketplace add pluginagentmarketplace/custom-plugin-ai-data-scientist
 
 # Step 2️⃣ Install the plugin
 /plugin install ai-data-scientist-plugin@pluginagentmarketplace-ai-data-scientist

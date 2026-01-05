@@ -58,6 +58,5 @@
     "./commands/learn.md",
     "./commands/projects.md",
     "./commands/roadmap.md"
-  ],
-  "hooks": "./hooks/hooks.json"
+  ]
 }
